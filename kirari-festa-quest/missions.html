@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ミッション一覧 - きらりフェスタQUEST</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>ミッション一覧</h2>
+    <p style="text-align: center; font-size: 0.9rem; color: #666; margin-bottom: 20px;">ブースを選んでミッションに挑戦しよう！</p>
+    
+    <div id="mission-list"></div>
+    
+    <a href="stamp.html" class="btn" style="background-color: #4caf50; margin-top: 20px;">スタンプ帳を確認する</a>
+    <a href="index.html" class="btn btn-sub">トップへ戻る</a>
+  </div>
+
+  <script src="assets/js/missions.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    const listContainer = document.getElementById('mission-list');
+    const completed = getCompletedMissions();
+
+    missions.forEach(mission => {
+      const isDone = completed.includes(mission.id);
+      const card = document.createElement('a');
+      card.href = `mission-detail.html?id=${mission.id}`;
+      card.className = `card ${isDone ? 'completed' : ''}`;
+      
+      card.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <span class="badge">${mission.boothNo} | ${mission.category}</span>
+          <span style="font-size: 0.8rem; color: #777;">目安: ${mission.time}</span>
+        </div>
+        <h3 style="text-align: left; margin: 6px 0; color: #333; font-size: 1.1rem;">${mission.title}</h3>
+        <p style="font-size: 0.9rem; margin: 0; color: #666;">📍 ブース: ${mission.boothName}</p>
+        <div style="margin-top: 10px; text-align: right; font-size: 0.85rem; font-weight: bold; color: ${isDone ? '#388e3c' : '#f57c00'};">
+          ${isDone ? '✅ 達成済み (スタンプ獲得)' : '👉 ミッションを見る (' + mission.level + ')'}
+        </div>
+      `;
+      listContainer.appendChild(card);
+    });
+  </script>
+</body>
+</html>

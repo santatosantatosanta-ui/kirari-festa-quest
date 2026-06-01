@@ -1,0 +1,122 @@
+const missions = [
+  {
+    id: "M001",
+    boothNo: "A-01",
+    boothName: "まちの防災ラボ",
+    category: "防災",
+    title: "停電時に役立つものを探せ",
+    description: "防災展示の中から、停電時に役立つものを3つ見つけよう。",
+    condition: "見つけたものを出展者に伝える。",
+    keyword: "そなえる",
+    time: "約5分",
+    level: "★☆☆"
+  },
+  {
+    id: "M002",
+    boothNo: "A-02",
+    boothName: "こども未来ステーション",
+    category: "子育て",
+    title: "子育ての相談先を見つけよう",
+    description: "子育てで困ったときに相談できる内容を1つ聞いてみよう。",
+    condition: "出展者から説明を聞く。",
+    keyword: "つながる",
+    time: "約3分",
+    level: "★☆☆"
+  },
+  {
+    id: "M003",
+    boothNo: "A-03",
+    boothName: "みんなの協働ひろば",
+    category: "市民活動",
+    title: "市民活動の魅力を聞こう",
+    description: "活動していてよかったことを出展者に聞いてみよう。",
+    condition: "出展者の話を聞く。",
+    keyword: "きらり",
+    time: "約3分",
+    level: "★☆☆"
+  },
+  {
+    id: "M004",
+    boothNo: "A-04",
+    boothName: "ともに暮らす福祉相談所",
+    category: "福祉",
+    title: "支え合いのヒントを探そう",
+    description: "地域で困っている人を支える活動を1つ知ろう。",
+    condition: "地域で困っている人を支える活動を1つ知る。",
+    keyword: "ささえる",
+    time: "約4分",
+    level: "★★☆"
+  },
+  {
+    id: "M005",
+    boothNo: "A-05",
+    boothName: "エコアクション工房",
+    category: "環境",
+    title: "今日からできるエコを見つけよう",
+    description: "展示から自分でもできるエコ行動を1つ選ぼう。",
+    condition: "展示から自分でもできるエコ行動を1つ選ぶ。",
+    keyword: "もったいない",
+    time: "約3分",
+    level: "★☆☆"
+  },
+  {
+    id: "M006",
+    boothNo: "B-01",
+    boothName: "男女きらり研究室",
+    category: "男女共同参画",
+    title: "家庭の役割分担を考えよう",
+    description: "家事・育児・仕事の分担について気づきを得よう。",
+    condition: "家事・育児・仕事の分担について気づきを得る。",
+    keyword: "ともに",
+    time: "約5分",
+    level: "★★☆"
+  },
+  {
+    id: "M007",
+    boothNo: "B-02",
+    boothName: "かまがや歴史発見隊",
+    category: "文化・地域",
+    title: "鎌ケ谷の魅力を発見しよう",
+    description: "地域の歴史や文化について1つ知ろう。",
+    condition: "地域の歴史や文化について1つ知る。",
+    keyword: "まちのわ",
+    time: "約5分",
+    level: "★★☆"
+  },
+  {
+    id: "M008",
+    boothNo: "B-03",
+    boothName: "若者まちづくりベース",
+    category: "若者参加",
+    title: "未来のまちアイデアを考えよう",
+    description: "若者が参加しやすい地域活動のアイデアを考えよう。",
+    condition: "若者が参加しやすい地域活動のアイデアを考える。",
+    keyword: "みらい",
+    time: "約5分",
+    level: "★★★"
+  },
+  {
+    id: "M009",
+    boothNo: "B-04",
+    boothName: "健康いきいきチェック",
+    category: "健康",
+    title: "健康習慣をチェックしよう",
+    description: "健康づくりのためにできる行動を1つ選ぼう。",
+    condition: "健康づくりのためにできる行動を1つ選ぶ。",
+    keyword: "げんき",
+    time: "約3分",
+    level: "★☆☆"
+  },
+  {
+    id: "M010",
+    boothNo: "B-05",
+    boothName: "ありがとう交流カフェ",
+    category: "交流",
+    title: "ありがとうを伝えよう",
+    description: "出展者に感想やお礼を伝えよう。",
+    condition: "出展者に感想やお礼を伝える。",
+    keyword: "ありがとう",
+    time: "約3分",
+    level: "★☆☆"
+  }
+];
